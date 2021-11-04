@@ -1,2 +1,3 @@
 # pat
-stores my pat solution in c++
+stores my PAT (Advanced Level) Practice solution in c++
+https://pintia.cn/problem-sets/994805342720868352/problems/type/7

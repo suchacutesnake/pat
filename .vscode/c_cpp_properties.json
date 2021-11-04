@@ -15,7 +15,9 @@
             "compilerArgs": [
                 "-std=c++17",
                 "-O2"
-            ]
+            ],
+            "cppStandard": "c++17",
+            "cStandard": "${default}"
         }
     ],
     "version": 4

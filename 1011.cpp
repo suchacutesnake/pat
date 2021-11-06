@@ -7,16 +7,18 @@ int main() {
     double mul = 1;
     for (int i = 0; i < 3; ++i) {
         scanf("%lf %lf %lf", &f[i][0], &f[i][1], &f[i][2]);
-        double t = 0;
-        int c = 0;
+        //largest number in one line
+        double ln = 0;
+        //index of the largest number in that line
+        int idx = 0;
         for (int j = 0; j < 3; ++j) {
-            if (f[i][j] > t) {
-                t = f[i][j];
-                c = j;
+            if (f[i][j] > ln) {
+                ln = f[i][j];
+                idx = j;
             }
         }
-        mul *= t;
-        printf("%c ", ch[c]);
+        mul *= ln;
+        printf("%c ", ch[idx]);
     }
     printf("%.2lf", (mul * 0.65 - 1) * 2);
     return 0;

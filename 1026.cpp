@@ -4,12 +4,13 @@
 #include <vector>
 #include <unordered_set>
 #include <algorithm>
+#include <cmath>
 class Players {
 public:
     int arr_time = 0x3f3f3f3f;
     int serve_time = 0x3f3f3f3f;
     int play_time;
-    int wait_time;
+    double wait_time;
     int tag;
 };
 bool cmp2(Players& p1, Players& p2) {
@@ -56,6 +57,7 @@ int main() {
                     break;
                 }
             }
+            
             //j is a vip table
             if (v_idx.count(j)) {
                 //find vip in the queue
@@ -87,14 +89,17 @@ int main() {
         }
         if (min_table_time > 21 * 3600) break;
     }
+    total.pop_back(); //erase the arr_time=0x3f3f3f3f
     std::sort(total.begin(), total.end(), cmp2);
     for (Players& p : total) {
         if (p.serve_time > 21 * 3600) break;
-        int h = p.arr_time / 3600, m = p.arr_time % 3600 / 60, s = p.arr_time % 3600 % 60;
-        int hh = p.serve_time / 3600, mm = p.serve_time % 3600 / 60, ss = p.serve_time % 3600 % 60;
-        printf("%02d:%02d:%02d %02d:%02d:%02d %d\n", h, m, s, hh, mm, ss, p.wait_time / 60 + (p.wait_time % 60 ? 1 : 0));//rounds up
+        int h = p.arr_time / 3600, m = p.arr_time % 3600 / 60, s = p.arr_time % 60;
+        int hh = p.serve_time / 3600, mm = p.serve_time % 3600 / 60, ss = p.serve_time % 60;
+        printf("%02d:%02d:%02d %02d:%02d:%02d %.0lf\n", h, m, s, hh, mm, ss, round(p.wait_time / 60));//rounds up
     }
-    printf("%d", count[0]);
-    for (int i = 1; i < K; ++i) printf(" %d", count[i]);
+    for (int i = 0; i < K; ++i) {
+        if (i != 0) printf(" ");
+        printf("%d", count[i]);
+    }
     return 0;
 }

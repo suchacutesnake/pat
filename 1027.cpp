@@ -5,7 +5,7 @@ std::string decimal_to_13(int& a) {
     std::string b;
     while (a) {
         int c = a % 13;
-        b.push_back((c < 10 ? c + '0' : c + 'A'));
+        b.push_back((c < 10 ? c + '0' : c - 10 + 'A'));
         a /= 13;
     }
     if (b.empty()) b.push_back('0');

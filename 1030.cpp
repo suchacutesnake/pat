@@ -3,10 +3,9 @@
 #include <vector>
 int mindis = 0x3f3f3f3f, mincost = 0x3f3f3f3f;
 std::vector<int> res;
-void dfs(std::vector<std::vector<std::vector<int> > >& mp, const int& D, int dis, int cost, std::vector<int>& vis) {
+void dfs(const std::vector<std::vector<std::vector<int> > >& mp, const int& D, int dis, int cost, std::vector<int>& vis) {
     if (dis > mindis) return;
-    int S = vis.back();
-    if (S == D) {
+    if (vis.back() == D) {
         if (dis < mindis) {
             mindis = dis;
             mincost = cost;
@@ -19,8 +18,8 @@ void dfs(std::vector<std::vector<std::vector<int> > >& mp, const int& D, int dis
         }
         return;
     }
-    for (int i = 0; i < vis.size() - 1; ++i) if (vis[i] == S) return;
-    for (auto& v : mp[S]) {
+    for (int i = 0; i < vis.size() - 1; ++i) if (vis[i] == vis.back()) return;
+    for (auto& v : mp[vis.back()]) {
         vis.emplace_back(v[0]);
         dfs(mp, D, dis + v[1], cost + v[2], vis);
         vis.pop_back();

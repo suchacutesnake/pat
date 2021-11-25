@@ -1,6 +1,26 @@
 {
     "configurations": [
         {
+            "name": "Windows10",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/ucrt",
+                "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.30.30705/include",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tr1",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/mingw64/bin/g++",
+            "intelliSenseMode": "windows-gcc-x64",
+            "cppStandard": "c++20",
+            "cStandard": "c17"
+        },
+        {
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",

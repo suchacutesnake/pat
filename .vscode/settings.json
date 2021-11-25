@@ -68,6 +68,10 @@
         "queue": "cpp",
         "set": "cpp",
         "__tree": "cpp",
-        "map": "cpp"
-    }
+        "map": "cpp",
+        "list": "cpp",
+        "xstring": "cpp"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
 }

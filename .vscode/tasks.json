@@ -6,7 +6,7 @@
             "command": "/usr/bin/clang++",
             "args": [
                 "-fdiagnostics-color=always",
-                "-O2",
+                "-O0",
                 "-std=c++17",
                 "-g",
                 "${file}",

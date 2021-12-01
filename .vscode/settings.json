@@ -70,7 +70,11 @@
         "__tree": "cpp",
         "map": "cpp",
         "list": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "valarray": "cpp",
+        "filesystem": "cpp",
+        "forward_list": "cpp",
+        "regex": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
     "C_Cpp.intelliSenseEngine": "Tag Parser",

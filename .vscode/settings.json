@@ -75,7 +75,8 @@
         "filesystem": "cpp",
         "forward_list": "cpp",
         "regex": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "stack": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
     "C_Cpp.intelliSenseEngine": "Tag Parser",

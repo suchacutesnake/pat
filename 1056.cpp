@@ -1,4 +1,5 @@
 //1056 Mice and Rice
+//test case
 //19 25 57 / 22 10 3 / 56 18 37 / 0 46
 //57 22 56 / 46
 //57 46
@@ -62,3 +63,5 @@ int main() {
     }
     return 0;
 }
+
+//interesting fact: the compiler optimized the map mp I used... How did it manage to do it???

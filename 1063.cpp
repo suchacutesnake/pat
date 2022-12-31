@@ -17,8 +17,7 @@ int main() {
     cin >> K;
     for (int i = 0; i < K; ++i) {
         int a, b; cin >> a >> b; --a; --b;
-        float Nc = 0, Nt = 0;
-        for (int x : v[a]) ++Nt;
+        float Nc = 0, Nt = v[a].size();
         for (int x : v[b]) {
             if (v[a].count(x)) ++Nc;
             else ++Nt;

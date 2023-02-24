@@ -21,11 +21,15 @@ int main() {
     vector<int> v(N), ans;
     for (int i = 0; i < N; ++i) scanf("%d", &v[i]);
     sort(v.begin(), v.end());
-    if (dfs(v, ans, 0, 0)) {
-        for (int i = 0; i < ans.size(); ++i) {
-            if (i == 0) printf("%d", ans[i]);
-            else printf(" %d", ans[i]);
+    for (int j = 0; j < N; ++j) {
+        if (dfs(v, ans, 0, j)) {
+            for (int i = 0; i < ans.size(); ++i) {
+                if (i == 0) printf("%d", ans[i]);
+                else printf(" %d", ans[i]);
+            }
+            return 0;
         }
-    } else printf("No Solution");
+    }
+    printf("No Solution");
     return 0;
 }

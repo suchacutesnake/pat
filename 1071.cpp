@@ -63,3 +63,46 @@ int main() {
     cout << most_common_word << ' ' << max_frequency;
     return 0;
 }
+
+//another solution, HashMap
+/*
+
+
+//1071 Speech Patterns
+#include <iostream>
+#include <unordered_map>
+
+using namespace std;
+
+int max_frequency = 0;
+string most_common_word;
+
+int main() {
+    string text;
+    getline(cin, text);
+    unordered_map<string ,int> um;
+    string word;
+    for (char c : text) {
+        c = tolower(c);
+        if ((c <= '9' && c >= '0') || (c <= 'z' && c >= 'a')) {
+            word += c;
+        } else if (!word.empty()) {
+            um[word]++;
+            if (um[word] > max_frequency) {
+                max_frequency = um[word];
+                most_common_word = word;
+            }
+            word.clear();
+        }
+    }
+    if (!word.empty() && ++um[word] > max_frequency) {
+        max_frequency = um[word];
+        most_common_word = word;
+    }
+    cout << most_common_word << ' ' << max_frequency;
+    return 0;
+}
+
+
+
+*/

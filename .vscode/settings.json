@@ -80,4 +80,5 @@
     },
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
     "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "C_Cpp.default.enableConfigurationSquiggles": false,
 }
